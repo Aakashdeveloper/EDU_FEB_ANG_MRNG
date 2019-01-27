@@ -1,0 +1,72 @@
+https://nodejs.org/en/
+https://github.com/
+https://git-scm.com/downloads
+https://code.visualstudio.com/
+
+
+nodejs
+Packages
+npm js
+node Packages manager
+
+Package.json
+
+javascript object notation
+[
+    {
+        name:"a",
+        class:"ai"
+    },
+    {
+        name:"b",
+        class:"ui"
+    }
+]
+
+
+/////
+npm init
+npm install zone.js
+
+
+sudo npm install -g @angular/cli
+
+=> To generate new seed
+ng new firstapp
+cd firstapp
+npm start
+http://localhost:4200/
+
+
+
+tslint.json=> way of writting code
+tsconfig => .ts into .js
+readme => guide the user how to run the code
+Package.json=> all dependences and start and script and description
+Package-lock.json=> all info of Packages
+angular.json => path and route
+.gitignore=> all code which not suppose to push
+.editorconfig => take code similar to the team
+node_modules=> all the modules or Packages
+src=>
+
+
+
+
+
+modules=>all decalarations(main=>App.module.ts)   {NgModule}
+components=> that containes all the html css logics(main=>App.component.ts){Component}
+Pipe=> to do run time data change {Pipe, PipeTransform}
+Service=>dependency injection connect to any third part or external url{Injectable}
+route=> routing /home /about
+
+
+tables
+alerts
+button
+glyphicons
+panels
+navbar
+forms
+input
+modal

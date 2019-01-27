@@ -1,0 +1,19 @@
+{
+  "name": "dummy",
+  "version": "1.0.0",
+  "description": "this is angular app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "angular"
+  ],
+  "author": "edurka",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "zone.js": "^0.8.29"
+  }
+}
