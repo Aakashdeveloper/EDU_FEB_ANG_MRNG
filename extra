@@ -70,3 +70,10 @@ navbar
 forms
 input
 modal
+
+
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/Aakashdeveloper/EDU_FEB_ANG_MRNG.git
+git push -u origin master
