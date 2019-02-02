@@ -37,6 +37,28 @@ cd firstapp
 npm start
 http://localhost:4200/
 
+//
+modules
+components
+databinding
+custome Pipe
+inbuilt Pipe
+css
+////
+serach bar
+rating
+passing data from one component to other
+basic Service
+
+//
+Service
+share module
+routing
+
+//
+forms
+testing
+
 
 
 tslint.json=> way of writting code
@@ -77,3 +99,156 @@ git add README.md
 git commit -m "first commit"
 git remote add origin https://github.com/Aakashdeveloper/EDU_FEB_ANG_MRNG.git
 git push -u origin master
+
+
+package.json> angular.json=> main.ts=> app.modudle.ts=> app.component.ts
+
+
+One Way
+--data binding {{}}
+--property binding []
+--Event binding ()
+Two Way [()]
+
+
+string
+number 
+boolean
+
+var a = "john"
+undefined
+a
+"john"
+var b = 8348548
+undefined
+b
+8348548
+var c = true
+undefined
+c
+true
+var d = "3454"
+undefined
+typeof(d)
+"string"
+typeof(c)
+"boolean"
+typeof(b)
+"number"
+typeof(a)
+"string"
+parseInt(d)
+3454
+var d = "3454.464565"
+undefined
+parseInt(d)
+3454
+parseFloat(d)
+3454.464565
+
+
+let fruits = ["apple", "mango", "banana"]
+let random = [1,3,"fg","bdf",6,5,67,true,"rgR"]
+
+map & filter in javascript
+https://www.w3schools.com/jsref/jsref_filter.asp
+https://www.w3schools.com/jsref/jsref_map.asp
+
+
+
+http://samplepizzaapi.azurewebsites.net/pizzas
+https://ngmovies.herokuapp.com/api/getMovies
+https://ngproductsparam.herokuapp.com/api/getProductDetails
+https://ngmusicdb.herokuapp.com/api/getMusic
+
+
+for(i=0; i<10; i++){
+    consolr.log(a[i])
+}
+
+var a = 10
+undefined
+a
+10
+var a = 20
+undefined
+a
+20
+let z = 10
+undefined
+z
+10
+let z = 11
+VM1834:1 Uncaught SyntaxError: Identifier 'z' has already been declared
+    at <anonymous>:1:1
+(anonymous) @ VM1834:1
+z = 11
+11
+z
+11
+const y = 20
+undefined
+y
+20
+const y = 21
+VM1882:1 Uncaught SyntaxError: Identifier 'y' has already been declared
+    at <anonymous>:1:1
+(anonymous) @ VM1882:1
+y=21
+VM1891:1 Uncaught TypeError: Assignment to constant variable.
+    at <anonymous>:1:2
+(anonymous) @ VM1891:1
+
+const u = [1,2,3,4]
+undefined
+u
+(4) [1, 2, 3, 4]
+u.push(5)
+5
+u
+(5) [1, 2, 3, 4, 5]
+
+
+*ngFor
+*ngIf this work on boolean
+if true it will show the tag else not
+
+
+products && products.length
+if(a==true){
+
+}
+
+if(a){
+
+}
+
+
+name="andy"
+{
+    name:name
+}
+{
+    name
+}
+
+/////////
+css inside ts file 
+css as stylesheet 
+inline css(css in tag)
+dynamic css(property binding)
+conditional css
+
+
+
+////////Pipe(filter)//////
+uppercase
+lowercase
+titlecase
+currency
+date
+percentage
+
+
+
+

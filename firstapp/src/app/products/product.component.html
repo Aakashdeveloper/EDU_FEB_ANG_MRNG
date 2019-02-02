@@ -1,40 +1,60 @@
 <div class="panel panel-primary">
     <div class="panel-heading">
-        Product App
+       {{title}}
     </div>
     <div class="panel-body">
         <div class="row">
             <div class="col-md-2">
-                <p>Filter By:</p>
+                <p>{{filterby}}:</p>
             </div>
             <div class="col-md-4">
-                <input type="text" placeholder="enter your text" />
+                <input type="text" placeholder="enter your text" 
+                [(ngModel)]="searchData"/>
             </div>
         </div>
         <div class="row">
             <div class="col-md-6">
-                    <h4>Number of product filter:</h4>
+                    <h4>Number of product filter:{{searchData}}</h4>
             </div>
         </div>
-        <div class="table-responsive">
+        {{showImage}}
+        <div class="table-responsive"  *ngIf="products && products.length">
             <table class="table">
                 <thead>
                     <tr>
+                        <th>
+                            <button class="btn btn-success"
+                                    (click)="toggleImage()">
+                                {{showImage?"Hide Image":"Show Image"}}
+                            </button>
+                        </th>
                         <th>Name</th>
                         <th>Class</th>
+                        <th>Date</th>
+                        <th>Price</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>John</td>
-                        <td>UI</td>
-                    </tr>
-                    <tr>
-                        <td>Andy</td>
-                        <td>AI</td>
+                    <tr *ngFor="let prod of products">
+                        <td>
+                            <img [src]="prod.imageUrl"
+                            *ngIf="showImage"
+                            [style.width.px]="imageWidth"
+                                />
+                        </td>
+                        <td style="color:olive">{{prod.productName | myUpper:'upper'}}</td>
+                        <td>{{prod.productCode | myUpper:'lower'}}</td>
+                        <td>{{prod.releaseDate}}</td>
+                        <td [ngStyle]="{'background-color':prod.price<20?'slateblue':'palevioletred'}"
+                            class="price">
+                            {{prod.price| discount  | currency:'AUD' }}
+                        </td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </div>
 </div>
+
+
+

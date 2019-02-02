@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    background: rgb(179, 224, 241)
+}
+
+h4{
+    color:slateblue
+}
