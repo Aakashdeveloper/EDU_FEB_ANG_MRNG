@@ -10,6 +10,9 @@ import { DetailComponent } from './detail.component';
 import { ProductComponent } from './products/product.component';
 import { MyUpperPipe } from './products/myUpper.pipe';
 import { DiscountPipe } from './products/discount.pipe';
+import { SearchPipe } from './products/productSearch.pipe';
+import { StarComponent } from './shared/star.component';
+import { ProductService } from './products/product.service';
 
 // decorator
 @NgModule({
@@ -25,7 +28,9 @@ import { DiscountPipe } from './products/discount.pipe';
         DetailComponent,
         ProductComponent,
         MyUpperPipe,
-        DiscountPipe
+        DiscountPipe,
+        SearchPipe,
+        StarComponent
 
     ],
 
@@ -35,7 +40,9 @@ import { DiscountPipe } from './products/discount.pipe';
     ],
 
     // all the services
-    providers: [ ]
+    providers: [
+        ProductService
+    ]
 })
 
 export class AppModule {

@@ -59,6 +59,16 @@ routing
 forms
 testing
 
+///////
+shared component
+nesting the component
+lifecycle hook
+pass data from parent to child with input
+pass data from child to parent with output
+starting with service
+
+
+
 
 
 tslint.json=> way of writting code
@@ -252,3 +262,29 @@ percentage
 
 
 
+
+//////////////////////
+function add(a,b){
+    return a+b
+}
+
+const add = (a,b) => { return a+b }
+var city = ["london", "newyork", "davos", "mumbai", "delhi"]
+city.indexOf("london")
+0
+var city = ["london", "newyork", "davos", "mumbai", "delhi"]
+city.indexOf("mumbai")
+3
+var city = ["london", "newyork", "davos", "mumbai", "delhi"]
+city.indexOf("amsterdam")
+-1
+var city = ["london", "newyork", "davos", "mumbai", "delhi"]
+city.indexOf("helsinki")
+-1
+
+
+///////
+dependency injection
+
+when the object recive a property from extranl object rather than
+creating itself
