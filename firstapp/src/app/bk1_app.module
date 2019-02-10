@@ -4,6 +4,7 @@ import {NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 
 // Components
 import {AppComponent} from './app.component';
@@ -11,9 +12,6 @@ import { OrderComponent } from './orders/orders.component';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './shared/notFound.component';
 import { ProductModule } from './products/products.module';
-import { AppRoutingModule } from './app-routing.module';
-import { MusicComponent } from './music/music.component';
-import { MusicService } from './music/music.service';
 
 // decorator
 @NgModule({
@@ -22,8 +20,13 @@ import { MusicService } from './music/music.service';
         BrowserModule,
         FormsModule,
         HttpClientModule,
-        ProductModule,
-        AppRoutingModule
+        RouterModule.forRoot([
+            {path: 'orders', component: OrderComponent},
+            {path: 'home', component: HomeComponent},
+            {path: '', redirectTo: 'home', pathMatch: 'full'},
+            {path: '**', component: NotFoundComponent}
+        ]),
+        ProductModule
     ],
     // all your component & pipes
     declarations: [
@@ -31,16 +34,13 @@ import { MusicService } from './music/music.service';
         OrderComponent,
         HomeComponent,
         NotFoundComponent,
-        MusicComponent
     ],
     // only and only first component
     bootstrap: [
         AppComponent
     ],
     // all the services
-    providers: [
-        MusicService
-    ]
+    providers: []
 })
 
 export class AppModule {

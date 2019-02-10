@@ -1,0 +1,26 @@
+<div class="row">
+    <div class="col-md-6">
+        <table>
+            <thead>
+                Music
+            </thead>
+            <tbody>
+                <tr *ngFor="let music of all_music" (click)="display(music.id)">
+                    <td>
+                        {{music.name}}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-md-6">
+        <table>
+            <thead>
+                Music
+            </thead>
+            <tbody>
+                <tr></tr>
+            </tbody>
+        </table>
+    </div>
+</div>

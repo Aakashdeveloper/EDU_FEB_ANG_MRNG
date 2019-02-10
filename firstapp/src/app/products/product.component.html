@@ -44,7 +44,9 @@
                             [style.width.px]="imageWidth"
                                 />
                         </td>
-                        <td style="color:olive">{{prod.productName | myUpper:'upper'}}</td>
+                        <td style="color:olive">
+                                <a [routerLink]="['/products',prod.productId]">{{prod.productName | myUpper:'upper'}}</a>
+                        </td>
                         <td>{{prod.productCode | myUpper:'lower'}}</td>
                         <td>{{prod.releaseDate}}</td>
                         <td [ngStyle]="{'background-color':prod.price<20?'slateblue':'palevioletred'}"
@@ -65,3 +67,6 @@
 
 
 
+<!--
+    [queryParams]="{qname:prod.productName,desc:prod.description,imageUrl:prod.imageUrl}"
+-->

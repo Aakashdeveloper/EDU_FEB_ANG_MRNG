@@ -288,3 +288,31 @@ dependency injection
 
 when the object recive a property from extranl object rather than
 creating itself
+
+
+Observables
+Streams so far are just a concept, an idea.
+
+We link streams together using operators, so in in our previous example the add function is an operation, specifically it’s an operation which combines two streams to create a third.
+
+Observables is a new primitive type which acts as a blueprint for how we want to create streams, subscribe to them, react to new values, and combine streams together to build new ones.
+
+It’s currently in discussion whether or not Observables make it into the ES7 version of JavaScript.
+
+We are still trying to roll out ES6 so even if it makes it, it will be many years before ES7 becomes something we can code with natively.
+
+Until then we need to use a library that gives us the Observable primitive and that’s where RxJS comes in.
+
+RxJS
+RxJS stands for *R*eactive E*x*tensions for *J*ava*S*cript, and its a library that gives us an implementation of Observables for JavaScript.
+
+Note
+Observables might become a core part of the JavaScript language in the future, so we can think of RxJS as a placeholder for when that arrives.
+RxJS is the JavaScript implementation of the ReactiveX API, which can be found here.
+
+////
+
+JSOn Server
+
+npm install -g json-Server
+json-server --watch db.json --port 8900

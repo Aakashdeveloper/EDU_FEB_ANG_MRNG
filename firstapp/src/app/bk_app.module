@@ -1,0 +1,72 @@
+import {NgModule} from '@angular/core';
+
+// Module
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+// import { HttpModule } from '@angular/http';
+import { RouterModule } from '@angular/router';
+
+// Components
+import {AppComponent} from './app.component';
+import { DetailComponent } from './detail.component';
+import { ProductComponent } from './products/product.component';
+import { MyUpperPipe } from './products/myUpper.pipe';
+import { DiscountPipe } from './products/discount.pipe';
+import { SearchPipe } from './products/productSearch.pipe';
+import { StarComponent } from './shared/star.component';
+import { ProductService } from './products/product.service';
+import { OrderComponent } from './orders/orders.component';
+import { ProductDetailComponent } from './products/product-detail.component';
+import { HomeComponent } from './home/home.component';
+import { NotFoundComponent } from './shared/notFound.component';
+
+// decorator
+@NgModule({
+    // all your module & routing
+    imports: [
+        BrowserModule,
+        FormsModule,
+        HttpClientModule,
+        // HttpModule
+        RouterModule.forRoot([
+            {path: 'products', component: ProductComponent},
+            {path: 'products/:id', component: ProductDetailComponent},
+            {path: 'orders', component: OrderComponent},
+            {path: 'home', component: HomeComponent},
+            {path: '', redirectTo: 'home', pathMatch: 'full'},
+            {path: '**', component: NotFoundComponent}
+        ])
+    ],
+
+    // all your component & pipes
+    declarations: [
+        AppComponent,
+        DetailComponent,
+        ProductComponent,
+        MyUpperPipe,
+        DiscountPipe,
+        SearchPipe,
+        StarComponent,
+        OrderComponent,
+        ProductDetailComponent,
+        HomeComponent,
+        NotFoundComponent
+
+    ],
+
+    // only and only first component
+    bootstrap: [
+        AppComponent
+    ],
+
+    // all the services
+    providers: [
+        ProductService
+    ]
+})
+
+export class AppModule {
+
+}
+
