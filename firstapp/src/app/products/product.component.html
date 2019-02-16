@@ -1,3 +1,7 @@
+<h3 [ngStyle]="{backgroundColor:getColor()}"
+    [ngClass]="{onlineClass: serverStatus==='Online'}">
+    Server status is {{serverStatus}}
+</h3>
 <div class="panel panel-primary">
     <div class="panel-heading">
        {{title}}
@@ -56,7 +60,8 @@
                         <td>
                             <app-star
                             [rating]="prod.starRating"
-                            (ratingClicked)="onDataRecive($event)"></app-star>
+                            (ratingClicked)="onDataRecive($event)">
+                            </app-star>
                         </td>
                     </tr>
                 </tbody>

@@ -2,6 +2,10 @@ import { Component, OnChanges, OnInit, OnDestroy,
         Input, Output, EventEmitter} from '@angular/core';
 
 @Component({
+    // Attribute
+    // selector: '[app-star]',
+    // Class
+    // selector: '.app-star',
     selector: 'app-star',
     templateUrl: './star.component.html',
     styleUrls: ['./star.component.css']
@@ -9,7 +13,10 @@ import { Component, OnChanges, OnInit, OnDestroy,
 
 export class StarComponent implements OnChanges, OnInit, OnDestroy {
     starWidth: number;
+
+    // @Input('ratingVal') rating: number;
     @Input() rating: number;
+    // @Output('rateClicked') ratingClicked: EventEmitter<string> = new EventEmitter<string>();
     @Output() ratingClicked: EventEmitter<string> = new EventEmitter<string>();
 
     onLoad(): void {

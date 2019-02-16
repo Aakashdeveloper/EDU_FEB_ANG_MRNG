@@ -5,7 +5,12 @@ import { ProductService } from './product.service';
 @Component({
     selector: 'app-prod',
     templateUrl: './product.component.html',
-    // styles: ['thead{color:purple}', 'h4{color:teal}']
+    // styles: ['thead{color:purple}', 'h4{color:teal}'],
+    styles: [`
+        .onlineClass{
+            color:white
+        }
+    `],
     styleUrls: ['./product.component.css']
 })
 
@@ -17,8 +22,11 @@ export class ProductComponent implements OnInit {
     searchData: String;
     imageWidth: Number = 100;
     products: IProduct[];
+    serverStatus: String = 'offline';
 
-    constructor(private _productSerice: ProductService) {}
+    constructor(private _productSerice: ProductService) {
+        this.serverStatus = Math.random() > 0.5 ? 'Online' : 'Offline';
+    }
 
     toggleImage(): void {
         this.showImage = !this.showImage;
@@ -31,6 +39,10 @@ export class ProductComponent implements OnInit {
     ngOnInit(): void {
        this._productSerice.getProducts()
        .subscribe((data) => this.products = data);
+    }
+
+    getColor() {
+        return this.serverStatus === 'Online' ? 'green' : 'red';
     }
 
 }

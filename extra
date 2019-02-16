@@ -316,3 +316,11 @@ JSOn Server
 
 npm install -g json-Server
 json-server --watch db.json --port 8900
+
+
+Template Driven Approch html>ts
+Reactive Driven ts>html
+npm install bootstrap@3
+
+ng-dirty      ng-touched        ng-invalid
+ng-pristine   ng-untouched      ng-valid
