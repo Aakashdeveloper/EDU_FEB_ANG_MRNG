@@ -324,3 +324,37 @@ npm install bootstrap@3
 
 ng-dirty      ng-touched        ng-invalid
 ng-pristine   ng-untouched      ng-valid
+
+/////////////
+cli
+ng generate component employee
+ng g c employee
+ng g s postemployee
+ng g p filter
+ng g m product
+
+
+          <!--
+                  <div class="form-group" [ngClass]="{'has-error':(employeeForm.get('email').touched ||
+                                                                employeeForm.get('email').dirty) &&
+                                                                !employeeForm.get('email').valid}">
+                    <label class="col-md-2 control-label" for="email">Email</label>
+                    <div class="col-md-8">
+                        <input class="form-control" 
+                        id="email"
+                        type="text"
+                        placeholder="enter your email"
+                        formControlName="email"/>
+                        <span class="help-block" *ngIf="(employeeForm.get('email').touched ||
+                                                        (employeeForm.get('email').dirty) &&
+                                                        (employeeForm.get('email').errors))">
+                              <span *ngIf="employeeForm.get('email').errors.required">
+                              Please enter email
+                              </span>
+                              <span *ngIf="employeeForm.get('email').errors.pattern">
+                              Enter valid email
+                              </span>
+                        </span>
+                    </div>
+                </div>
+          -->
